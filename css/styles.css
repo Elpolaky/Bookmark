@@ -1,0 +1,110 @@
+@font-face {
+  font-family: Pacifico;
+  src: url("../webfonts/Pacifico/Pacifico-Regular.woff") format("woff"),
+    url("../webfonts/Pacifico/Pacifico-Regular.woff2") format("woff2"),
+    url("../webfonts/Pacifico/Pacifico-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Righteous;
+  src: url("../webfonts/Righteous/Righteous-Regular.woff") format("woff"),
+    url("../webfonts/Righteous/Righteous-Regular.woff2") format("woff2"),
+    url("../webfonts/Righteous/Righteous-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Pt Sans;
+  src: url("../webfonts/PT_Sans_Caption/PTSans-Caption.woff") format("woff"),
+    url("../webfonts/PT_Sans_Caption/PTSans-Caption.woff2") format("woff2"),
+    url("../webfonts/PT_Sans_Caption/PTSansCaption-Regular.ttf") format("ttf");
+}
+
+body {
+  background-color: #f7ecde;
+}
+
+header {
+  /* background-color: aqua; */
+  border: dotted black;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  h1 {
+    display: inline-block;
+    position: relative;
+    font-family: "Pacifico";
+    font-size: 3.2rem;
+    overflow: hidden;
+    &::after {
+      content: "Bookmarker";
+      position: absolute;
+      left: 0;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 30%;
+      top: 50%;
+      background-color: #fec260;
+      border-top-right-radius: 100%;
+      border-bottom-right-radius: 100%;
+      border-bottom-left-radius: 40%;
+      position: absolute;
+      left: 0;
+      transition: all 0.4s;
+    }
+    &:hover {
+      &::before {
+        top: 25%;
+        height: 80%;
+      }
+    }
+  }
+}
+.title h2,
+i {
+  font-family: "Righteous";
+  font-size: 1.7rem;
+}
+.title h2 {
+  background: linear-gradient(to right, green, rgb(245, 193, 5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.myForm,
+.table-header,
+.mySites {
+  font-family: "Pt Sans";
+}
+
+.myForm {
+  border: dotted black;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+.items-centtralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.urlGuideHide {
+  left: -200rem;
+  position: absolute;
+  transition: all 3s;
+}
+
+.urlGuideVisible {
+  display: inline-block;
+  position: relative;
+  left: 0rem;
+  transition: all 1s;
+}
+.form-control:focus {
+  border-color:  #fec260;;
+  box-shadow: 0 0 0 .25rem #fec1607a;
+}
